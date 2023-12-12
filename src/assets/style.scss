@@ -1,2 +1,9 @@
 @use './partial/reset.scss' as *;
 @use './partial/common.scss' as *;
+@use './partial/variables.scss' as *;
+
+main {
+  background-color: $bg-main;
+  width: 100%;
+  height: 100vh;
+}
