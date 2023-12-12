@@ -1,7 +1,7 @@
 <script>
 import AppHeaderLogo from './AppHeaderLogo.vue';
 export default {
-  nome: Header,
+  name: 'Header',
   components: {
     AppHeaderLogo,
   },
@@ -9,9 +9,13 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header class="container">
     <AppHeaderLogo />
   </header>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.container {
+  width: 100%;
+}
+</style>
