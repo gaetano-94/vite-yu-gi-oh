@@ -19,8 +19,7 @@ export default {
 
   select {
     font-size: 18px;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin: 20px 0px 20px 10px;
     width: 200px;
     padding: 5px;
     border-radius: 5px;
