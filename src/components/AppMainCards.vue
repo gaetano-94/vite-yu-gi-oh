@@ -1,16 +1,42 @@
 <script>
+import axios from 'axios';
+import AppMainCard from './AppMainCard.vue';
+import AppMainFound from './AppMainFound.vue';
+
 export default {
   name: 'MainCards',
+  components: {
+    AppMainCard,
+    AppMainFound,
+  },
+
+  data() {
+    return {
+      cards: [],
+      apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=0',
+    };
+  },
+  created() {
+    axios.get(this.apiUrl).then((response) => {
+      this.cards = response.data.data;
+      console.log(response);
+    });
+  },
 };
 </script>
 
 <template>
   <div class="container">
     <div class="found">
-      <h3>Found 39 cards</h3>
+      <AppMainFound :found="cards.length" />
     </div>
     <div class="container-cards">
-      <div class="card"></div>
+      <AppMainCard
+        v-for="card in cards"
+        :name="card.name"
+        :race="card.race"
+        :img="card.card_images[0].image_url_small"
+      />
     </div>
   </div>
 </template>
@@ -21,12 +47,12 @@ export default {
   width: 1140px;
   height: 100%;
   margin: 0 auto;
-  background-color: aqua;
+  background-color: white;
   padding: 50px 50px;
 
   .found {
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: $bg-found;
     display: flex;
     align-items: center;
@@ -39,8 +65,8 @@ export default {
 
   .container-cards {
     width: 100%;
-    background-color: yellow;
-    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 </style>
