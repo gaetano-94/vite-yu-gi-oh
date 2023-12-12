@@ -2,7 +2,7 @@
 import AppMainSearch from './AppMainSearch.vue';
 import AppMainCards from './AppMainCards.vue';
 export default {
-  nome: Main,
+  name: 'Main',
   components: {
     AppMainSearch,
     AppMainCards,
@@ -11,8 +11,10 @@ export default {
 </script>
 
 <template>
-  <AppMainSearch />
-  <AppMainCards />
+  <main>
+    <AppMainSearch />
+    <AppMainCards />
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

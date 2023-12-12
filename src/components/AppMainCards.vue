@@ -1,6 +1,6 @@
 <script>
 export default {
-  nome: MainCards,
+  name: 'MainCards',
 };
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-  nome: MainSearch,
+  name: 'MainSearch',
 };
 </script>
 
