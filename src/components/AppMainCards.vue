@@ -9,7 +9,6 @@ export default {
     AppMainCard,
     AppMainFound,
   },
-
   data() {
     return {
       cards: [],
@@ -19,7 +18,6 @@ export default {
   created() {
     axios.get(this.apiUrl).then((response) => {
       this.cards = response.data.data;
-      console.log(response);
     });
   },
 };
@@ -27,10 +25,10 @@ export default {
 
 <template>
   <div class="container">
-    <div class="found">
-      <AppMainFound :found="cards.length" />
-    </div>
     <div class="container-cards">
+      <div class="found">
+        <AppMainFound :found="cards.length" />
+      </div>
       <AppMainCard
         v-for="card in cards"
         :name="card.name"
@@ -66,7 +64,6 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: space-between;
   }
 }

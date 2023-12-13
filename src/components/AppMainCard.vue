@@ -22,7 +22,7 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 6);
+  width: calc(100% / 5 - 30px);
   margin-bottom: 20px;
   text-align: center;
   background-color: $bg-main;

@@ -1,6 +1,7 @@
 <script>
 import AppMainSearch from './AppMainSearch.vue';
 import AppMainCards from './AppMainCards.vue';
+
 export default {
   name: 'Main',
   components: {
