@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       cards: [],
-      apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=0',
+      apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0',
     };
   },
   created() {
@@ -34,7 +34,7 @@ export default {
       <AppMainCard
         v-for="card in cards"
         :name="card.name"
-        :race="card.race"
+        :type="card.type"
         :img="card.card_images[0].image_url_small"
       />
     </div>
@@ -45,7 +45,6 @@ export default {
 @use '../assets/partial/variables.scss' as *;
 .container {
   width: 1140px;
-  height: 100%;
   margin: 0 auto;
   background-color: white;
   padding: 50px 50px;

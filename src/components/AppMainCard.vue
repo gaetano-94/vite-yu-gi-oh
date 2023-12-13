@@ -1,7 +1,7 @@
 <script>
 export default {
   name: 'MainCard',
-  props: ['name', 'race', 'img'],
+  props: ['name', 'type', 'img'],
 };
 </script>
 
@@ -12,7 +12,7 @@ export default {
     </div>
     <div class="text">
       <h4>{{ name }}</h4>
-      <p>{{ race }}</p>
+      <p>{{ type }}</p>
     </div>
   </div>
 </template>

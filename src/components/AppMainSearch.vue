@@ -6,8 +6,8 @@ export default {
 
 <template>
   <div class="container">
-    <select name="Alien" id="">
-      <option value="1">Alien</option>
+    <select name="type" id="">
+      <option value="1">Spell Card</option>
     </select>
   </div>
 </template>
