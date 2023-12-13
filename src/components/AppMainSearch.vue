@@ -1,18 +1,24 @@
 <script>
 export default {
   name: 'MainSearch',
+
+  data() {
+    return {
+      searchType: '',
+    };
+  },
 };
 </script>
 
 <template>
   <div class="container">
-    <select name="searchcards" id="cards">
-      <option selected="search">Search Cards</option>
-      <option value="1">Spell Card</option>
-      <option value="2">Trap Card</option>
-      <option value="3">Normal Monster</option>
-      <option value="4">Effect Monster</option>
-      <option value="5">Flip Effect Monster</option>
+    <select name="searchcards" id="cards" v-model="searchType">
+      <option selected value="">Search Cards</option>
+      <option value="Spell Card">Spell Card</option>
+      <option value="Trap Card">Trap Card</option>
+      <option value="Normal Monster">Normal Monster</option>
+      <option value="Effect Monster">Effect Monster</option>
+      <option value="Flip Effect Monster">Flip Effect Monster</option>
     </select>
   </div>
 </template>
