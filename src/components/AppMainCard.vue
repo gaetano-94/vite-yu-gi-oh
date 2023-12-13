@@ -12,26 +12,34 @@ export default {
     </div>
     <div class="text">
       <h4>{{ name }}</h4>
-      <p>{{ type }}</p>
+      <h5>{{ type }}</h5>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+@use '../assets/partial/variables.scss' as *;
 .card {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 5);
+  width: calc(100% / 6);
   margin-bottom: 20px;
   text-align: center;
+  background-color: $bg-main;
+
+  img {
+    width: 100%;
+  }
 
   .text {
     margin: 0 auto;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
 
     h4 {
       margin: 10px;
+      color: white;
     }
   }
 }

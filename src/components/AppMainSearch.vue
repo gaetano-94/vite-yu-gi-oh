@@ -6,8 +6,13 @@ export default {
 
 <template>
   <div class="container">
-    <select name="type" id="">
+    <select name="searchcards" id="cards">
+      <option selected="search">Search Cards</option>
       <option value="1">Spell Card</option>
+      <option value="2">Trap Card</option>
+      <option value="3">Normal Monster</option>
+      <option value="4">Effect Monster</option>
+      <option value="5">Flip Effect Monster</option>
     </select>
   </div>
 </template>

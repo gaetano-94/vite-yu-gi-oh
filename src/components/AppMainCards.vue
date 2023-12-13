@@ -35,7 +35,7 @@ export default {
         v-for="card in cards"
         :name="card.name"
         :type="card.type"
-        :img="card.card_images[0].image_url_small"
+        :img="card.card_images[0].image_url"
       />
     </div>
   </div>
@@ -66,6 +66,8 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
   }
 }
 </style>
